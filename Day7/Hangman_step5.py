@@ -1,3 +1,4 @@
+#Hangman project:
 import random # import random module
 import Hangman_word_list # import Hangman_word_list module
 import Hangman_art # import Hangman_art module
