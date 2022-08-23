@@ -1,0 +1,9 @@
+# To comment out code use shift + cmd + 7 
+# To create a backslash use option + shift + 7
+# To escape a ' you can use a backslash:
+# input('You\' re at a bus. Do you want to "hop on" or "stay"?')
+# To get informatin about funtions in your code, simply hover over them
+# If you are stuck in an infinite loop, right click on the terminal and select kill terminal
+# To import one thing you can use "from module_name import "what to import"
+
+# Vim causes the overwrite/overtype problem (can not type until insert is pressed)
