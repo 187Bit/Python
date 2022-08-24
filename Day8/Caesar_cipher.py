@@ -23,7 +23,7 @@ def encrypt(text, shift):
 
         shift_value = position_in_alphabet + shift
 
-        if shift_value > len(alphabet):
+        if shift_value > len(alphabet): # Check if this works
            shift_value =  shift_value - len(alphabet)
 
         new_text.append(alphabet[shift_value])
