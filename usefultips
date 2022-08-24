@@ -5,5 +5,6 @@
 # To get informatin about funtions in your code, simply hover over them
 # If you are stuck in an infinite loop, right click on the terminal and select kill terminal
 # To import one thing you can use "from module_name import "what to import"
+# To add quotation marks around both sides of a word, highlight it and press shift + 2
 
 # Vim causes the overwrite/overtype problem (can not type until insert is pressed)
