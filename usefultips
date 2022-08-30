@@ -12,4 +12,6 @@
 
 # Docstring to explain the function of your code -> to create a docstring you use """Your docstring"""
 
+# abs() returns the absolute value of a calculation
+
 # Vim causes the overwrite/overtype problem (can not type until insert is pressed)
