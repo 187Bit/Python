@@ -1,19 +1,3 @@
-# Print logo 
-# Count function 
-# Random function
-
-# Same scoes: Dealer wins
-# Ace 1 or 11
-# King, Jack or Queen equals to 10
-# Dealer hand smaller than 17 then they must take another card
-
-############### Blackjack Project #####################
-
-#Difficulty Normal 😎: Use all Hints below to complete the project.
-#Difficulty Hard 🤔: Use only Hints 1, 2, 3 to complete the project.
-#Difficulty Extra Hard 😭: Only use Hints 1 & 2 to complete the project.
-#Difficulty Expert 🤯: Only use Hint 1 to complete the project.
-
 ############### Our Blackjack House Rules #####################
 
 ## The deck is unlimited in size. 
@@ -34,12 +18,8 @@ def Blackjack():
 
     print(Blackjack_art.logo)
 
-    # all_cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-    all_cards = [11, 2, 3, 4, 5, 6, 11]
-    dealer_cards = []
-    new_drawn_card = 0
-    
-
+    all_cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10] # List named all_cards
+    dealer_cards = [] # Empty list called dealer_cards
 
     scores = {
 
@@ -66,7 +46,6 @@ def Blackjack():
     
 
     scores = calculate_score(cards)
-    print(f"Scores are {scores}")
     player_score = scores["Player"]
     dealer_cards.append(cards["Dealer"][0])
 
@@ -84,7 +63,6 @@ def Blackjack():
 
             if 11 in cards["Player"]:
                 scores["Player"] -= 10
-                print("triggered")
                 for card in cards["Player"]:
                     if card == 11:
                         cards["Player"][counter] = 1
@@ -93,22 +71,62 @@ def Blackjack():
                         counter += 1
                 player_score = scores["Player"]
                 print(f"Your cards are: {cards['Player']} and your current score is: {player_score}.")
+            else:
+                print("You win! The dealer went over 21!")
+                play_again = input("Do you want to play again?\n")
+                if play_again == "no":
+                    game = False
+                    print("Have a good day!")
+                else:
+                    game = False
+                    os.system('cls' if os.name == 'nt' else 'clear') #clear the terminal screen after an input
+                    Blackjack()
 
                 
         if scores["Dealer_full"] > 21:
             
             if 11 in cards["Dealer"]:
                 scores["Dealer_full"] -= 10
-                print("triggered")
                 for card in cards["Dealer"]:
                     if card == 11:
                         cards["Dealer"][counter] = 1
                         counter += 1
                     else:
                         counter += 1
+            else:
+                print("You win! The dealer went over 21!")
+                play_again = input("Do you want to play again?\n")
+                if play_again == "no":
+                    game = False
+                    print("Have a good day!")
+                else:
+                    game = False
+                    os.system('cls' if os.name == 'nt' else 'clear') #clear the terminal screen after an input
+                    Blackjack()
+                
 
-        
-           
+        if scores["Player"] == 21:
+            print("You win! You have a blackjack.")
+            play_again = input("Do you want to play again?\n")
+            if play_again == "no":
+                    game = False
+                    print("Have a good day!")
+            else:
+                game = False
+                os.system('cls' if os.name == 'nt' else 'clear') #clear the terminal screen after an input
+                Blackjack()
+
+        if scores["Dealer_full"] == 21:
+            print("You lose! The dealer has a blackjack.")
+            play_again = input("Do you want to play again?\n")
+            if play_again == "no":
+                    game = False
+                    print("Have a good day!")
+            else:
+                game = False
+                os.system('cls' if os.name == 'nt' else 'clear') #clear the terminal screen after an input
+                Blackjack()
+
         
         want_new_card = input("Do you want to draw a new card? Type 'yes' for a new and 'no' for no new card.\n")
 
@@ -121,22 +139,13 @@ def Blackjack():
             for position in range(0, len(cards["Dealer"])-1):
                 dealer_cards.append(cards["Dealer"][position])
 
-
-            
-
-
-
             player_score = scores["Player"]
             dealer_score = scores["Dealer"]
-
             
 
             print(f"Your cards are: {cards['Player']} and your current score is: {player_score}.")
             print(f"The computer's cards are: {dealer_cards} and the current score is: {dealer_score}")
             
-
-            
-                    
         else:
             end_result(scores, all_cards, cards) # Check it after any turn instead of after no draw of a new card
             play_again = input("Do you want to play again?\n")
@@ -148,16 +157,9 @@ def Blackjack():
                 os.system('cls' if os.name == 'nt' else 'clear') #clear the terminal screen after an input
                 Blackjack()
             
-                   
-                        
-
-
-
 def calculate_score(cards):
 
-    print(f"Current_cards: {cards}")
-
-
+    
     calculated_score = {
 
         "Player": 0,
@@ -243,7 +245,6 @@ def end_result(scores, all_cards, cards):
         print("You lose!")
         print(f"The dealer's final hand was {dealer_cards} and the score was {dealer_score}.")
        
-
 play_game = input("Do you want to play Black Jack? Type 'yes' or 'no'.\n")
 
 if play_game == "yes":
