@@ -14,4 +14,6 @@
 
 # abs() returns the absolute value of a calculation
 
+# To edit multiple variables at the same time you can hightlight one and press cmd + d to move the cursor down one variable
+
 # Vim causes the overwrite/overtype problem (can not type until insert is pressed)
