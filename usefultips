@@ -16,4 +16,9 @@
 
 # To edit multiple variables at the same time you can hightlight one and press cmd + d to move the cursor down one variable
 
+# To import module and use an alias you can do:
+# import turtle as t
+# Then you have to write: t.method_name()
+
+
 # Vim causes the overwrite/overtype problem (can not type until insert is pressed)
