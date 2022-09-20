@@ -20,5 +20,7 @@
 # import turtle as t
 # Then you have to write: t.method_name()
 
+# self is the object that gets created from the class
+
 
 # Vim causes the overwrite/overtype problem (can not type until insert is pressed)
