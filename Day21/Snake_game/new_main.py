@@ -58,6 +58,4 @@ while game:
     screen.onkey(key= "Left", fun =snake.left)
     screen.onkey(key= "Right", fun = snake.right)
  
-
-
 screen.exitonclick()
