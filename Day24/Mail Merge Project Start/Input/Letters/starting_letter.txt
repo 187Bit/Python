@@ -1,0 +1,6 @@
+Hello [name],
+
+I hereby summon you to a secret meeting.
+Please visit me at xyz.
+
+Regards, XY
