@@ -2,7 +2,7 @@
 #---------------------------------------------------------------------------------
 #String: chain of characters
 #"Hello"
-#To pull out an individual character of the string you can use [index]
+#To pull out an individual character of the string you can use [index], because a string is a list of chars
 #print("Hello"[0]) -> prints out the first character of the word "Hello": H 
 #This is called subscrpiting
 
