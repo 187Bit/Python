@@ -21,3 +21,10 @@ for letter in chosen_word:
         print("Right")
     else:
         print("Wrong")
+
+# Alternative: (Only solves the todo, but is not helpful for later use)
+
+if guess in chosen_word:
+    print("It is in the word")
+else:
+    print("It is not in the word")
